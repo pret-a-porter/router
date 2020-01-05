@@ -4,6 +4,7 @@
   "description": "Next generation Routing for React.",
   "main": "index.js",
   "module": "es/index.js",
+  "types": "index.d.ts",
   "files": [
     "es",
     "index.js",
