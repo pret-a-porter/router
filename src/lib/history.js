@@ -1,5 +1,12 @@
 let getLocation = source => {
-  const { pathname, search, hash } = source.location;
+  const { search, hash } = source.location;
+  let { pathname } = source.location;
+
+  if (!pathname && source.location.href) {
+    const url = new URL(source.location.href);
+    pathname = url.pathname;
+  }
+
   return {
     pathname,
     search,
